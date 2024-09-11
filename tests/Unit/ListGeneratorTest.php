@@ -2,7 +2,7 @@
 
 use MakeItWithExercises\ListGenerator;
 
-describe('should generate a list', function () {
+describe('[exercises #1, #2] should generate a list', function () {
     it('may list be filled', function () {
         expect(empty(ListGenerator::buildInt()))->toBe(false);
     });
