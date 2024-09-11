@@ -4,9 +4,9 @@
 
     class Book {
         public function __construct(
-            public readonly string $title,
-            public readonly string $description,
-            public readonly string $author,
-            public readonly int $year
+            public string $title,
+            public string $description,
+            public string $author,
+            public int $year
         ) {}
     }

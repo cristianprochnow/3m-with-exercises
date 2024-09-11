@@ -2,8 +2,28 @@
 
     namespace MakeItWithExercises;
 
-    class BookRegister {
-        public function add(Book $book): void {}
+    use Exception;
 
-        public function list(): array {}
+    class BookRegister {
+        /**
+         * @var Book[]
+         */
+        private array $books = [];
+
+        public function add(Book $newBook): void {
+            foreach ($this->books as $book) {
+                if ($book->title === $newBook->title) {
+                    throw new Exception('Book already exists');
+                }
+            }
+
+            $this->books[] = $newBook;
+        }
+
+        /**
+         * @return Book[]
+         */
+        public function list(): array {
+            return $this->books;
+        }
     }
