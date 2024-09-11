@@ -2,7 +2,7 @@
 
     use MakeItWithExercises\KiloToMass;
 
-    describe('[exercise #4] should convert kilos', function () {
+    describe('[exercise #3] should convert kilos', function () {
         it('may return zero to moon', function () {
             expect(KiloToMass::convertToMoon(0))->toBe((float) 0);
         });
