@@ -10,12 +10,18 @@
         public static function convertToMars(float $weight): float {
             if (empty($weight)) return 0.0;
 
-            return $weight * (self::EARTH_GRAVITY / self::MARS_GRAVITY);
+            return round(
+                num: $weight * (self::EARTH_GRAVITY / self::MARS_GRAVITY),
+                precision: 2
+            );
         }
 
         public static function convertToMoon(float $weight): float {
             if (empty($weight)) return 0.0;
 
-            return $weight * (self::EARTH_GRAVITY / self::MOON_GRAVITY);
+            return round(
+                num: $weight * (self::MOON_GRAVITY / self::EARTH_GRAVITY),
+                precision: 2
+            );
         }
     }
